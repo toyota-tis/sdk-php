@@ -62,6 +62,28 @@ abstract class Response
     }
 
     /**
+     * Return true if the response contains the given error code
+     *
+     * @author Pete Warnes <pete@warnes.dk>
+     * @param string $code
+     * @return bool
+     */
+    public function hasError($code)
+    {
+        $foundCode = false;
+        if (is_array($this->errors)) {
+            foreach ($this->errors as $error) {
+                if (isset($error->code) && $error->code == $code) {
+                    $foundCode = true;
+                    break;
+                }
+            }
+        }
+
+        return $foundCode;
+    }
+
+    /**
      * Get the error messages associated with the response
      *
      * @author Pete Warnes <pete@warnes.dk>
