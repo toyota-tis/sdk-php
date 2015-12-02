@@ -2,13 +2,13 @@
 
 namespace Easir\SDK;
 
-trait PopulatableFromApi
+trait PopulatableFromData
 {
     /**
      * @author Pete Warnes <pete@warnes.dk>
      * @param \Traversable $data
      */
-    public function populateFromApiData($data)
+    public function populateFromData($data)
     {
         foreach ($data as $paramName => $paramValue) {
             if (property_exists($this, $paramName)) {

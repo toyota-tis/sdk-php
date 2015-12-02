@@ -12,7 +12,7 @@ use Easir\SDK\Helper\StringHelper;
  */
 abstract class Model
 {
-    use PopulatableFromApi;
+    use PopulatableFromData;
 
     /**
      * Model constructor.
@@ -21,7 +21,7 @@ abstract class Model
      */
     public function __construct($data = null)
     {
-        $this->populateFromApiData($data);
+        $this->populateFromData($data);
     }
 
     /**

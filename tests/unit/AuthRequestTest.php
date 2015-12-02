@@ -23,6 +23,33 @@ class AuthRequestTest extends \Codeception\TestCase\Test
         $this->assertEquals(json_encode($model), (string)$request, "Looks like the request model wasn't json encoded");
     }
 
+    public function testInitWithMissingFields()
+    {
+        $data = ['client_id' => "ID", "invalid" => "invalidValue"];
+        $model = new Auth($data);
+        $this->assertEquals($data['client_id'], $model->client_id, "Valid value was not initialised.");
+        $this->setExpectedException(PHPUnit_Framework_Exception::class, "Undefined property: Easir\\SDK\\Request\\Model\\Auth::\$invalid");
+        $this->assertNotEmpty($model->invalid, "Invalid property was set.");
+    }
+
+    public function testInitWithArray()
+    {
+        $data = ['client_id' => "ID", "client_secret" => "SECRET"];
+        $model = new Auth($data);
+        $this->assertEquals($data['client_id'], $model->client_id, "Valid value was not initialised.");
+        $this->assertEquals($data['client_secret'], $model->client_secret, "Valid value was not initialised.");
+    }
+
+    public function testInitWithObject()
+    {
+        $data = new \stdClass();
+        $data->client_id = "ID";
+        $data->client_secret = "SECRET";
+        $model = new Auth($data);
+        $this->assertEquals($data->client_id, $model->client_id, "Valid value was not initialised.");
+        $this->assertEquals($data->client_secret, $model->client_secret, "Valid value was not initialised.");
+    }
+
     public function testModelInjection()
     {
         $model = m::mock(Auth::class);

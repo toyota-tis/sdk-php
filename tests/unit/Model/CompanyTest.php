@@ -13,7 +13,7 @@ class CompanyTest extends \Codeception\TestCase\Test
     public function testPopulateEmpty()
     {
         $model = new Company();
-        $model->populateFromApiData(array());
+        $model->populateFromData(array());
 
         foreach ($model as $paramName => $paramValue) {
             $this->assertNull($paramValue, "Unexpected not null value for param: " . $paramName);
@@ -27,7 +27,7 @@ class CompanyTest extends \Codeception\TestCase\Test
         $name = $faker->name;
 
         $model = new Company();
-        $model->populateFromApiData(array('name' => $name, 'anotherName' => $faker->name));
+        $model->populateFromData(array('name' => $name, 'anotherName' => $faker->name));
         $this->assertSame($name, $model->name, "Given populate value was not correctly populated");
 
         $this->setExpectedException(PHPUnit_Framework_Exception::class, "Undefined property: Easir\\SDK\\Model\\Company::\$anotherName");
@@ -94,7 +94,7 @@ class CompanyTest extends \Codeception\TestCase\Test
         $data->user->updated_at = $faker->date('Y-m-d H:i:s');
 
         $model = new Company();
-        $model->populateFromApiData($data);
+        $model->populateFromData($data);
 
         $this->tester->assertSameContents($data, $model, "The model was not correctly populated from a generic data array");
     }

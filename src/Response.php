@@ -14,7 +14,7 @@ use Easir\SDK\Model;
  */
 abstract class Response
 {
-    use PopulatableFromApi;
+    use PopulatableFromData;
 
     public $errors, $status;
 
@@ -34,7 +34,7 @@ abstract class Response
 
         $responseData = json_decode($clientResponse->getBody()->getContents());
 
-        $response->populateFromApiData($responseData);
+        $response->populateFromData($responseData);
 
         return $response;
     }
