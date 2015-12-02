@@ -16,7 +16,7 @@ abstract class Response
 {
     use PopulatableFromData;
 
-    public $errors, $status;
+    public $errors, $statusCode;
 
     /**
      * Create an instance from the Guzzle client response object
@@ -30,7 +30,7 @@ abstract class Response
     {
         $response = new static;
 
-        $response->status = $clientResponse->getStatusCode();
+        $response->statusCode = $clientResponse->getStatusCode();
 
         $responseData = json_decode($clientResponse->getBody()->getContents());
 
