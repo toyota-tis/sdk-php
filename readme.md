@@ -14,10 +14,11 @@ To run tests `./vendor/bin/codecept run`
 -- Models
 - Response
 
-Include into your project using composer `"easir/sdk"`. You need to define the repository in your composer.json too:
-
 ## Usage
 ### Installing
+
+Include into your project using composer `"easir/sdk"`. You need to define the repository in your composer.json too:
+
 ```
   {
     "type": "package",
