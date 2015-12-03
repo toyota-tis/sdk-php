@@ -14,11 +14,11 @@ use Easir\SDK\Request\Model;
  */
 abstract class Request
 {
-    public $url;
+    protected $url;
     public $method = "GET";
     public $options = array();
     public $requiresAuth = true;
-    public $model;
+    public $model = null;
     public $responseClass = null;
 
     protected $modelClass;
@@ -31,9 +31,9 @@ abstract class Request
      * @param Model $model
      * @throws RequestException
      */
-    public function __construct(Model $model)
+    public function __construct(Model $model = null)
     {
-        if (!is_a($model, $this->modelClass)) {
+        if (!is_null($model) && !is_a($model, $this->modelClass)) {
             throw new RequestException(sprintf("Bad model class (%s) expecting %s", $model, $this->modelClass), RequestException::BAD_MODEL);
         }
 
@@ -62,5 +62,11 @@ abstract class Request
         if (!in_array($this->method, $this->allowedMethods)) {
             throw new RequestException("Bad request method", RequestException::BAD_METHOD);
         }
+    }
+
+
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

@@ -6,6 +6,7 @@ use Easir\SDK\Response;
 
 /**
  * This is both a model and a Response
+ *
  * @package Easir\SDK\Model
  *
  * @author Pete Warnes <pete@warnes.dk>

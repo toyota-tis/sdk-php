@@ -15,6 +15,9 @@ class Auth extends Model
 {
     public $client_id, $client_secret;
 
+    // Only used for grantType=refresh_token
+    public $refresh_token;
+
     // Only used for grantType=password
     public $username, $password;
 }

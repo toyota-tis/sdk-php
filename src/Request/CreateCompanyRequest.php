@@ -15,7 +15,7 @@ use Easir\SDK\Model\Company;
  */
 class CreateCompanyRequest extends Request
 {
-    public $url = '/companies';
+    protected $url = '/companies';
     public $method = 'POST';
     public $requiresAuth = true;
     public $responseClass = Company::class;

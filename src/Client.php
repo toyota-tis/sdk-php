@@ -45,7 +45,7 @@ class Client extends GuzzleClient
         }
 
         $options['json'] = $request->model;
-        $url = rtrim($this->endpoint, '/') . $request->url;
+        $url = rtrim($this->endpoint, '/') . $request->getUrl();
         $options = array_merge($options, $request->options);
 
         try {

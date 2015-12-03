@@ -15,13 +15,13 @@ use Easir\SDK\Response\AuthResponse;
  */
 class AuthRequest extends Request
 {
-    public $url = '/token';
+    protected $url = '/token';
     public $method = 'POST';
     public $requiresAuth = false;
     public $responseClass = AuthResponse::class;
     protected $modelClass = Auth::class;
 
-    private $availableGrantTypes = ['client_credentials', 'password'];
+    private $availableGrantTypes = ['client_credentials', 'password', 'refresh_token'];
 
     public function __construct(Model $model)
     {
@@ -39,6 +39,4 @@ class AuthRequest extends Request
 
         $this->options['query'] = ['grant_type' => $grantType];
     }
-
-
 }

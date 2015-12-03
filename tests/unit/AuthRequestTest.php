@@ -92,4 +92,12 @@ class AuthRequestTest extends \Codeception\TestCase\Test
         $request->setGrantType($grantType);
         $this->assertSame($request->options, ['query' => ['grant_type' => $grantType]], "Grant type was not set as expected");
     }
+
+    public function testPublicUrlInterface()
+    {
+        $model = m::mock(Auth::class);
+        $request = new AuthRequest($model);
+
+        $this->assertSame("/token", $request->getUrl());
+    }
 }
