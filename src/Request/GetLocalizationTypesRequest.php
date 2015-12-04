@@ -17,7 +17,7 @@ abstract class GetLocalizationTypesRequest extends Request
     protected $url = '/localization-types';
     protected $urlSuffix = "";
     public $method = 'GET';
-    public $requiresAuth = true;
+    public $requiresAuth = false;
     public $responseClass = LocalizationTypes::class;
 
     public function getUrl()
