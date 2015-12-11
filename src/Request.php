@@ -9,8 +9,6 @@ use Easir\SDK\Request\Model;
  * Request base class.
  *
  * @package Easir\SDK
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
 abstract class Request
 {
@@ -43,7 +41,6 @@ abstract class Request
     /**
      * Used to format the request to send to the API
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @return string
      */
     public function __toString()
@@ -54,7 +51,6 @@ abstract class Request
     /**
      * Perform validation on the request object
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @throws RequestException
      */
     public function validate()

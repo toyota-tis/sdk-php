@@ -5,8 +5,6 @@ namespace Easir\SDK;
 /**
  * Class Exception
  * @package Easir\SDK
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
 abstract class Exception extends \Exception
 {
@@ -50,7 +48,6 @@ abstract class Exception extends \Exception
     /**
      * Tell us is a given error code is known
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @param $errorCode
      * @return bool
      */

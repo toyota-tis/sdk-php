@@ -26,7 +26,6 @@ class Client extends GuzzleClient
     /**
      * Execute request to the EASI'R API
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @throws ClientException
      */
     public function execute(Request $request)
@@ -72,7 +71,6 @@ class Client extends GuzzleClient
     /**
      * Checks for errors and throws an exception if any are found
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @throws ClientException
      */
     private function validate()

@@ -9,8 +9,6 @@ use Easir\SDK\Model;
  * Response base class
  *
  * @package Easir\SDK
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
 abstract class Response
 {
@@ -21,7 +19,6 @@ abstract class Response
     /**
      * Create an instance from the Guzzle client response object
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @static
      * @param \Easir\SDK\Response $clientResponse
      * @return static
@@ -42,7 +39,6 @@ abstract class Response
     /**
      * Format response as a JSON string
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @return string
      */
     public function asJson()
@@ -53,7 +49,6 @@ abstract class Response
     /**
      * Return true if the response has errors
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @return bool
      */
     public function hasErrors()
@@ -64,7 +59,6 @@ abstract class Response
     /**
      * Return true if the response contains the given error code
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @param string $code
      * @return bool
      */
@@ -86,7 +80,6 @@ abstract class Response
     /**
      * Get the error messages associated with the response
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @return array
      */
     public function getErrorMessages()

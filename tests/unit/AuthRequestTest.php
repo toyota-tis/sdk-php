@@ -1,6 +1,6 @@
 <?php
 
-use \Easir\SDK\Request\AuthRequest;
+use \Easir\SDK\Request\Auth as AuthRequest;
 use \Easir\SDK\Request\Model\Auth;
 use \Easir\SDK\Request\Model;
 use \Easir\SDK\Exception\RequestException;

@@ -7,8 +7,6 @@ use Easir\SDK\Exception;
 /**
  * Exceptions specific to Easir\SDK\Client
  * @package Easir\SDK\Exception
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
 class ClientException extends Exception
 {

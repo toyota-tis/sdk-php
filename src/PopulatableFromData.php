@@ -4,22 +4,21 @@ namespace Easir\SDK;
 
 trait PopulatableFromData
 {
-    /**
-     * List of possible collection names and their types
-     *
-     * @var array
-     */
-    private $collections = [
-            'companies' => 'company',
-            'locales' => 'locale',
-            'timezones' => 'timezone',
-            'currencies' => 'currency',
-            'languages' => 'language',
-            'countries' => 'country',
-    ];
+    protected $collections = array();
 
     /**
-     * @author Pete Warnes <pete@warnes.dk>
+     * Model constructor.
+     *  Optionally takes a traversable object to initialise the model from.
+     *
+     * @param \Traversable $data
+     */
+    public function __construct($data = array())
+    {
+        $this->populateFromData($data);
+    }
+
+
+    /**
      * @param \Traversable $data
      */
     public function populateFromData($data)
@@ -39,6 +38,8 @@ trait PopulatableFromData
                 } else {
                     $this->$paramName = $paramValue;
                 }
+            } else {
+                // Look for response specific mapping?
             }
         }
     }

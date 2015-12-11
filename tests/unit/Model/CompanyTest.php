@@ -36,6 +36,22 @@ class CompanyTest extends \Codeception\TestCase\Test
 
     public function testPopulateFull()
     {
+        $data = $this->getFakeCompanyData();
+
+        $model = new Company();
+        $model->populateFromData($data);
+
+        $this->assertInstanceOf(\Easir\SDK\Model\Billing::class, $model->billing);
+        $this->assertInstanceOf(\Easir\SDK\Model\Timezone::class, $model->timezone);
+        $this->assertInstanceOf(\Easir\SDK\Model\Locale::class, $model->locale);
+        $this->assertInstanceOf(\Easir\SDK\Model\Language::class, $model->language);
+        $this->assertInstanceOf(\Easir\SDK\Model\Currency::class, $model->currency);
+
+        $this->tester->assertSameContents($data, $model, "The model was not correctly populated from a generic data array");
+    }
+
+    private function getFakeCompanyData()
+    {
         $faker = Faker\Factory::create();
 
         $data = new \stdClass;
@@ -78,24 +94,7 @@ class CompanyTest extends \Codeception\TestCase\Test
         $data->currency->symbol_native = "kr";
         $data->currency->decimal_digits = 2;
         $data->currency->rounding = 0;
-        $data->user = new \stdClass;
-        $data->user->id = $faker->randomNumber();
-        $data->user->id2 = $faker->randomNumber();
-        $data->user->first_name = $faker->firstName;
-        $data->user->last_name = $faker->lastName;
-        $data->user->phone_number = $faker->phoneNumber;
-        $data->user->job_title = $faker->text(20);
-        $data->user->email = $faker->email;
-        $data->user->email_notifications = $faker->boolean();
-        $data->user->profile_picture = $faker->imageUrl();
-        $data->user->user_type = new \stdClass;
-        $data->user->user_type->name = $faker->name;
-        $data->user->created_at = $faker->date('Y-m-d H:i:s');
-        $data->user->updated_at = $faker->date('Y-m-d H:i:s');
 
-        $model = new Company();
-        $model->populateFromData($data);
-
-        $this->tester->assertSameContents($data, $model, "The model was not correctly populated from a generic data array");
+        return $data;
     }
 }

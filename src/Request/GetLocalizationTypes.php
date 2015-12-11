@@ -9,10 +9,8 @@ use Easir\SDK\Model\LocalizationTypes;
  * Base request class for getting the localisation types
  *
  * @package Easir\SDK\Request
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
-abstract class GetLocalizationTypesRequest extends Request
+abstract class GetLocalizationTypes extends Request
 {
     protected $url = '/localization-types';
     protected $urlSuffix = "";

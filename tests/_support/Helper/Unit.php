@@ -9,7 +9,6 @@ class Unit extends \Codeception\Module
     /**
      * Will assert that two objects (not necessarily of the same type) have the same contents
      *
-     * @author Pete Warnes <pete@warnes.dk>
      * @param object $expected
      * @param object $actual
      * @param string $message

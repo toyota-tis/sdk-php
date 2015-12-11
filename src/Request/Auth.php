@@ -4,22 +4,20 @@ namespace Easir\SDK\Request;
 
 use Easir\SDK\Exception\RequestException;
 use Easir\SDK\Request;
-use Easir\SDK\Request\Model\Auth;
-use Easir\SDK\Response\AuthResponse;
+use Easir\SDK\Request\Model\Auth as AuthRequestModel;
+use Easir\SDK\Response\Auth as AuthResponse;
 
 /**
  * Class AuthRequest
  * @package Easir\SDK\Request
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
-class AuthRequest extends Request
+class Auth extends Request
 {
     protected $url = '/token';
     public $method = 'POST';
     public $requiresAuth = false;
     public $responseClass = AuthResponse::class;
-    protected $modelClass = Auth::class;
+    protected $modelClass = AuthRequestModel::class;
 
     private $availableGrantTypes = ['client_credentials', 'password', 'refresh_token'];
 

@@ -5,11 +5,9 @@ namespace Easir\SDK\Request\Model;
 use Easir\SDK\Request\Model;
 
 /**
- * Auth request model
+ * The request model for Auth
  *
  * @package Easir\SDK\Request\Model
- *
- * @author Pete Warnes <pete@warnes.dk>
  */
 class Auth extends Model
 {
