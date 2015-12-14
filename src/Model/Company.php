@@ -11,6 +11,6 @@ use Easir\SDK\Response;
  */
 class Company extends Response
 {
-    public $id, $name, $company_name, $phone_number, $website, $vat, $logo_1, $logo_2, $created_ad, $updated_at,
+    public $id, $name, $phone_number, $website, $vat, $logo_1, $logo_2, $created_at, $updated_at,
             $billing, $timezone, $locale, $language, $currency;
 }
