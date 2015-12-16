@@ -5,7 +5,7 @@ namespace Easir\SDK\Request;
 use Easir\SDK\Exception\RequestException;
 use Easir\SDK\Request;
 use Easir\SDK\Request\Model\GetAccessToken as GetAccessTokenModel;
-use Easir\SDK\Response\AccessToken;
+use Easir\SDK\Response\Auth as AuthResponse;
 
 /**
  * Request class for getting an access token for a given user
@@ -17,7 +17,7 @@ class GetAccessToken extends Request
     protected $url = '/token/%d';
     public $method = 'GET';
     public $requiresAuth = true;
-    public $responseClass = AccessToken::class;
+    public $responseClass = AuthResponse::class;
     protected $modelClass = GetAccessTokenModel::class;
 
     public function getUrl()

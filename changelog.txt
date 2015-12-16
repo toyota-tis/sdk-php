@@ -1,3 +1,6 @@
+0.6.1
+GET /token/{userId} now uses the \Easir\SDK\Response\Auth response type
+
 0.6.0
 Added support for GET /me
 Added support for GET /token/{userId}
