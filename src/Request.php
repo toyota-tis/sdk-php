@@ -32,7 +32,7 @@ abstract class Request
     public function __construct(Model $model = null)
     {
         if (!is_null($model) && !is_a($model, $this->modelClass)) {
-            throw new RequestException(sprintf("Bad model class (%s) expecting %s", $model, $this->modelClass), RequestException::BAD_MODEL);
+            throw new RequestException(sprintf("Bad model class (%s) expecting %s", get_class($model), $this->modelClass), RequestException::BAD_MODEL);
         }
 
         $this->model = $model;

@@ -1,3 +1,7 @@
+0.6.0
+Added support for GET /me
+Added support for GET /token/{userId}
+
 0.5.0
 Added support for GET /companies/{companyId}/users
 Added support for GET /companies/{companyId}/users/{userId}
