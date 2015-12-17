@@ -1,3 +1,6 @@
+0.6.2
+Renamed GetAccessToken to GetAuthForUser to reflect the change in 0.6.1
+
 0.6.1
 GET /token/{userId} now uses the \Easir\SDK\Response\Auth response type
 

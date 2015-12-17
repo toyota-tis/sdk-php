@@ -9,7 +9,7 @@ use Easir\SDK\Request\Model;
  *
  * @package Easir\SDK\Request\Model
  */
-class GetAccessToken extends Model
+class GetAuthForUser extends Model
 {
     public $userId;
 }
