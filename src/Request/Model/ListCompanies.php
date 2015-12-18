@@ -11,5 +11,5 @@ use Easir\SDK\Request\Model;
  */
 class ListCompanies extends Model
 {
-    public $searchTerm = "", $page = 1, $perPage = 15;
+    public $searchTerm = "", $page = 1, $perPage = 15, $userCounts = 0;
 }

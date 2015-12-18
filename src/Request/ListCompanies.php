@@ -24,7 +24,7 @@ class ListCompanies extends Request
         if (is_null($this->model)) {
             return parent::getUrl();
         } else {
-            return parent::getUrl() . sprintf("?page=%d&per_page=%d&q=%s", (int)$this->model->page, (int)$this->model->perPage, urlencode((string)$this->model->searchTerm));
+            return parent::getUrl() . sprintf("?page=%d&per_page=%d&user_counts=%d&q=%s", (int)$this->model->page, (int)$this->model->perPage, (int)$this->model->userCounts, urlencode((string)$this->model->searchTerm));
         }
     }
 }

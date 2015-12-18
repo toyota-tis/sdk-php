@@ -1,3 +1,6 @@
+0.6.3
+Added support for user_counts on GET /companies
+
 0.6.2
 Renamed GetAccessToken to GetAuthForUser to reflect the change in 0.6.1
 
