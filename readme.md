@@ -1,6 +1,6 @@
 # EASI'R PHP SDK
 
-Current version `0.6.3`
+Current version `0.7.0`
 Supported API version `1.1.0`
 
 The purpose of this SDK is to standardise how our apps communicate with the EASI'R API.
@@ -24,11 +24,11 @@ Include into your project using composer `"easir/sdk"`. You need to define the r
     "type": "package",
     "package": {
       "name": "easir/sdk",
-      "version": "0.6.3",
+      "version": "0.7.0",
       "source": {
         "url": "git@bitbucket.org:e2c-saas/easir-sdk.git",
         "type": "git",
-        "reference": "tags/0.6.3"
+        "reference": "tags/0.7.0"
       },
       "autoload": {
         "psr-4": {

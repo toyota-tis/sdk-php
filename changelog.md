@@ -1,3 +1,7 @@
+0.7.0
+Added support for GET /companies/{companyId}/teams
+Added support for GET /teams/{teamId}
+
 0.6.3
 Added support for user_counts on GET /companies
 

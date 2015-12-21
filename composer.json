@@ -1,6 +1,6 @@
 {
     "name": "easir/sdk",
-    "version": "0.6.3",
+    "version": "0.7.0",
     "type": "library",
     "autoload": {
         "psr-4": {
