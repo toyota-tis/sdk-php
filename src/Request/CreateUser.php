@@ -8,7 +8,7 @@ use Easir\SDK\Model\User;
 use Easir\SDK\Exception\RequestException;
 
 /**
- * Request class for creating teams
+ * Request class for creating users
  *
  * @package Easir\SDK\Request
  */
