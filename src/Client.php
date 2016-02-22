@@ -65,6 +65,8 @@ class Client extends GuzzleClient
             $response = json_decode($clientResponse->getBody()->getContents());
         }
 
+
+
         return $response;
     }
 
