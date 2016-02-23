@@ -4,6 +4,7 @@ namespace Easir\SDK;
 
 use Easir\SDK\Exception\ClientException;
 use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\RequestException;
 
 class Client extends GuzzleClient
 {
@@ -49,12 +50,14 @@ class Client extends GuzzleClient
 
         try {
             $clientResponse = $this->request($request->method, $url, $options);
-        } catch (\Exception $e) {
+        } catch (RequestException $e) {
             if ($e->hasResponse()) {
                 $clientResponse = $e->getResponse();
             } else {
                 throw $e;
             }
+        } catch (\Exception $e) {
+            throw $e;
         }
 
         $responseClass = $request->responseClass;
@@ -64,6 +67,7 @@ class Client extends GuzzleClient
             // We don't have a response object so lets just show the raw json response
             $response = json_decode($clientResponse->getBody()->getContents());
         }
+
 
         return $response;
     }

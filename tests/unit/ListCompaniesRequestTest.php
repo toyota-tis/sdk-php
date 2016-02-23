@@ -21,9 +21,10 @@ class ListCompaniesRequestTest extends \Codeception\TestCase\Test
         $model = new Model\ListCompanies();
         $model->page = $faker->randomNumber(1);
         $model->perPage = $faker->randomNumber(2);
+        $model->userCounts = rand(0, 1);
         $model->searchTerm = $faker->words($numWords = 3, $asTest = true);
         $request = new ListCompaniesRequest($model);
-        $this->assertSame('/companies' . sprintf('?page=%d&per_page=%d&q=%s', $model->page, $model->perPage, urlencode($model->searchTerm)), $request->getUrl());
+        $this->assertSame('/companies' . sprintf('?page=%d&per_page=%d&user_counts=%d&q=%s', $model->page, $model->perPage, $model->userCounts, urlencode($model->searchTerm)), $request->getUrl());
     }
 
 }
