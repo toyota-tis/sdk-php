@@ -3,7 +3,7 @@
 namespace Easir\SDK\Request;
 
 use Easir\SDK\Request;
-use Easir\SDK\Request\Model\CreateAccount as AccountRequestModel;
+use Easir\SDK\Request\Model\CreateAccount as CreateAccountRequestModel;
 use Easir\SDK\Model\Account;
 
 /**
@@ -17,5 +17,5 @@ class CreateAccount extends Request
     public $method = 'POST';
     public $requiresAuth = true;
     public $responseClass = Account::class;
-    protected $modelClass = AccountRequestModel::class;
+    protected $modelClass = CreateAccountRequestModel::class;
 }

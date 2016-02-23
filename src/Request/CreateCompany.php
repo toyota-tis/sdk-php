@@ -2,9 +2,9 @@
 
 namespace Easir\SDK\Request;
 
-use Easir\SDK\Request;
-use Easir\SDK\Request\Model\CreateCompany as CompanyRequestModel;
 use Easir\SDK\Model\Company;
+use Easir\SDK\Request;
+use Easir\SDK\Request\Model\CreateCompany as CreateCompanyRequestModel;
 
 /**
  * Request class for creating companies
@@ -17,5 +17,5 @@ class CreateCompany extends Request
     public $method = 'POST';
     public $requiresAuth = true;
     public $responseClass = Company::class;
-    protected $modelClass = CompanyRequestModel::class;
+    protected $modelClass = CreateCompanyRequestModel::class;
 }
