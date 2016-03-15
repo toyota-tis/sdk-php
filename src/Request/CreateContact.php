@@ -3,7 +3,7 @@
 namespace Easir\SDK\Request;
 
 use Easir\SDK\Request;
-use Easir\SDK\Request\Model\CreateContact as ContactRequestModel;
+use Easir\SDK\Request\Model\CreateContact as CreateContactRequestModel;
 use Easir\SDK\Model\Contact;
 
 /**
@@ -17,7 +17,7 @@ class CreateContact extends Request
     public $method = 'POST';
     public $requiresAuth = true;
     public $responseClass = Contact::class;
-    protected $modelClass = ContactRequestModel::class;
+    protected $modelClass = CreateContactRequestModel::class;
 
     public function getUrl()
     {

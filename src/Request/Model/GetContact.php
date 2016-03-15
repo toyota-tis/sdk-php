@@ -5,7 +5,7 @@ namespace Easir\SDK\Request\Model;
 use Easir\SDK\Request\Model;
 
 /**
- * The request model for GetCompanyUser
+ * The request model for GetContact
  *
  * @package Easir\SDK\Request\Model
  */
