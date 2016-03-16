@@ -10,7 +10,7 @@ use Easir\SDK\Response;
  */
 class ListCompanyCases extends Response
 {
-    protected $collections = ['data' => 'case'];
+    protected $collections = ['data' => 'cases'];
 
     public $data, $pagination;
 }

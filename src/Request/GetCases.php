@@ -8,13 +8,13 @@ use Easir\SDK\Request\Model\GetCase as GetCaseModel;
 use Easir\SDK\Model\Cases;
 
 /**
- * Request class for getting a specific team
+ * Request class for getting a specific case
  *
  * @package Easir\SDK\Request
  */
-class GetTeam extends Request
+class GetCase extends Request
 {
-    protected $url = '/teams/%d';
+    protected $url = '/cases/%d';
     public $method = 'GET';
     public $requiresAuth = true;
     public $responseClass = Cases::class;
