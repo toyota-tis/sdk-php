@@ -21,7 +21,6 @@ class CreateActivity extends Request
 
     public function getUrl()
     {
-        //var_dump($this->model);die();
         if (is_null($this->model)) {
             throw new RequestException("We can't make a request without a RequestModel", RequestException::MISSING_MODEL);
         } else {
