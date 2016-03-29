@@ -14,7 +14,7 @@ use Easir\SDK\Model\Cases;
  */
 class GetCase extends Request
 {
-    protected $url = '/cases/%d';
+    protected $url = '/cases/%s';
     public $method = 'GET';
     public $requiresAuth = true;
     public $responseClass = Cases::class;
@@ -25,7 +25,7 @@ class GetCase extends Request
         if (is_null($this->model)) {
             throw new RequestException("We can't make a request without a RequestModel", RequestException::MISSING_MODEL);
         } else {
-            return sprintf(parent::getUrl(), (int)$this->model->id);
+            return sprintf(parent::getUrl(), $this->model->id);
         }
     }
 }
