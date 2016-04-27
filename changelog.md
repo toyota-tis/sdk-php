@@ -2,7 +2,10 @@
 Fixed bad class name
 
 0.8.0
-Added recent additions and updates
+Added support for:
+Create: Account, Activity, Case, Contact, Team, User
+Get: Case
+List: Accounts, Cases
 
 0.7.0
 Added support for GET /companies/{companyId}/teams
