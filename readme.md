@@ -1,7 +1,7 @@
 # EASI'R PHP SDK
 
-Current version `0.8.0`
-Supported API version `1.4.0`
+Current version `0.8.1`
+Supported API version `1.4.1`
 
 The purpose of this SDK is to standardise how our apps communicate with the EASI'R API.
 
@@ -24,11 +24,11 @@ Include into your project using composer `"easir/sdk"`. You need to define the r
     "type": "package",
     "package": {
       "name": "easir/sdk",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "source": {
         "url": "git@github.com:LoyaltyFactory/sdk-php.git",
         "type": "git",
-        "reference": "tags/0.8.0"
+        "reference": "tags/0.8.1"
       },
       "autoload": {
         "psr-4": {

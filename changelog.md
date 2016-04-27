@@ -1,3 +1,9 @@
+0.8.1
+Fixed bad class name
+
+0.8.0
+Added recent additions and updates
+
 0.7.0
 Added support for GET /companies/{companyId}/teams
 Added support for GET /teams/{teamId}
